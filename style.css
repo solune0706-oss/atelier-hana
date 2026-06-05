@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.concept, .item, .instagram {
+    padding: 60px 40px;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0 0 0;
+}
+
+h1, h2, h3 {
+    font-family: "Cormorant Garamond", serif;
+}
+
+p, a, li {
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+h1 {
+    font-weight: 300;
+    text-align: center;
+    margin: 10px 0 10px 0;
+    font-size: 70px;
+    color: rgb(105, 88, 81);
+    text-shadow:  2px 2px 4px rgb(225, 215, 181);
+}
+
+nav {
+    background-color: rgba(252, 240, 252, 0.527);
+
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    
+}
+
+nav ul li  a {
+    color: rgb(197, 170, 160);
+    padding: 12px 16px;
+    display: block;
+}
+
+.hero {
+    background-image: url("images/hero.png");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); /* 黒の30%透過 */
+}
+
+.hero h2 {
+    position: relative; /* オーバーレイより前面に出す */
+    z-index: 1;
+    font-weight: 200;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.8);
+    color: #ffffff; /* 白にする */
+    font-size: 32px;
+}
+
+
+h3 {
+    font-size: 30px;
+    color: rgb(123, 103, 94);
+    text-shadow: 2px 2px 4px rgb(225, 215, 181);
+    border-bottom: 3px solid #ffeefe;
+    width: 200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.item-card {
+    text-align: center;
+}
+
+.item-card p {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 18px;
+    color: rgb(105, 88, 81);
+    letter-spacing: 2px;
+    margin-top: 8px;
+}
+
+.item-grid {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    padding: 20px 60px;
+}
+
+.item-grid img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.concept {
+    text-align: center;
+}
+
+.concept p {
+    padding: 20px 0;
+    color: rgb(60, 60, 60);
+}
+
+.concept span {
+    font-weight: bold;
+    color: rgb(197, 170, 160);
+}
+
+.insta-grid {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    padding: 20px 40px;
+}
+
+.insta-grid img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.insta-btn {
+    text-align: center;
+    padding: 0px 40px 60px 40px;
+}
+
+.btn {
+    display: inline-block;
+    border: 1px solid rgb(197, 170, 160);
+    color: rgb(105, 88, 81);
+    font-family: "Noto Sans JP";
+    font-size: 14px;
+    padding: 12px 32px;
+    letter-spacing: 2px;
+}
+
+.btn i {
+    font-size: 20px;
+}
+
+.btn:hover {
+    background-color: rgb(197, 170, 160);
+    color: white;
+}
+
+footer {
+    background-color: rgba(252, 240, 252, 0.527);
+    padding: 10px;
+    color: rgb(197, 170, 160);
+    font-size: 14px;
+    text-align: center;
+}
+
+footer p {
+    font-family: "Cormorant Garamond", serif;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    .hero h2 {
+        font-size: 25px;
+    }
+
+    .item-grid {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        /* width と height は削除 */
+    }
+
+    .item-grid img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .insta-grid {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .insta-grid img {
+        width: 100px;
+        height: 100px;
+    }
+}
